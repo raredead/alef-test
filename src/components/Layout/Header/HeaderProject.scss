@@ -1,0 +1,32 @@
+.header {
+    color: #ffffff;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    padding: 22px 0;
+
+    &__logo {
+        flex: 0 0 45%;
+    }
+}
+
+.btns-header-main{
+
+    &__btn{
+        text-decoration: none;
+        font-weight: 400;
+        color: #8D8D8D;
+        font-size: 16px;
+    }
+
+    &__btn:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    &__btn:hover{
+        text-decoration: underline;
+    }
+}
