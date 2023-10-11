@@ -17,7 +17,7 @@
             <div class="form-kids">
                 <div class="form-kids__header">
                     <div class="form-kids__title title">Дети (макс.5)</div>
-                    <button class="form-kids__btn" @click="addKids">
+                    <button class="form-kids__btn" @click="addKids" v-if="kids.length < 5">
                         <img class="form-kids__img" src="@/assets/form/Union.svg" alt="">
                         <span class="form-kids__txt">Добавить ребенка</span>
                     </button>
@@ -34,9 +34,6 @@
                         </div>
                         <button class="inputs-form-kids__btn" @click="removeKid(kid)">Удалить</button>
                     </template>
-                    <div v-if="kids.length >= 5">
-                        <span>Максимальное количество детей достигнуто</span>
-                    </div>
                 </div>
             </div>
             <button class="form-main__save">Сохранить</button>
@@ -58,7 +55,7 @@ export default {
                     id: Math.random(),
                     name: '',
                     age: ''
-                });
+                })
             }
         },
         removeKid(kid) {
